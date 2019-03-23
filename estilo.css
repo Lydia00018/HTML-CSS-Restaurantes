@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/*COMÚN*/
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: rgb(247, 247, 247);
+  font-family: 'Lato', sans-serif;
+}
+
+main{
+  position: relative;
+  padding-bottom: 20px;
+}
+
+/*HEADER/MENU*/
+header{
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+#logo img{
+  width: 150px;
+  margin: 15px;
+}
+
+.nav-cabecera{ 
+  width: 40%;
+}
+
+.nav-cabecera ul {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#item-menu{
+  width: 200px;
+}
+
+#item-menu a{
+  text-decoration: none;
+  color: black;
+  padding: 30.5px 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+#item-menu a:hover{
+  color: white;
+  background-color:#E53935;
+  z-index: 8;
+}
+
+#sub-restaurantes{
+  display: none;
+  background-color: white;
+  color: #E53935;
+  width: 192.5px;
+  z-index: 8;
+}
+
+#sub-restaurantes a{
+  text-decoration: none;
+  padding: 30.50px 50px;
+  z-index: 8;
+  color: black;
+}
+
+#sub-restaurantes a:hover{
+  z-index: 8;
+}
+
+#item-menu:hover #sub-restaurantes{
+  position: absolute;
+  display: flex;
+  flex-direction:column;
+  z-index: 8;
+}
+
+/*SLIDER*/
+.banner{
+  color: aliceblue;
+  height: 50%;
+  padding: 10rem;
+  text-align: center;
+  animation: banner 15s infinite;
+  font-family: 'Lato', sans-serif;
+  margin-top: 80px;
+  position: relative;
+  z-index: 2;
+ }
+ 
+@keyframes banner{
+  0%,4%{
+      opacity: 0.4;
+   } 
+  5%,30% {
+     background: linear-gradient(
+        rgb(82, 81, 82),
+        rgba(177, 194, 184, 0.4)
+    ),
+      url("img/img6.jpg");
+      background-size: cover;
+      opacity: 1.5;
+  }
+  31%,34%{
+     opacity: 0.8;
+  } 
+  35%,65%{
+     background: linear-gradient(
+        
+        rgb(82, 81, 82),
+        rgba(177, 194, 184, 0.1)
+    ),
+     url("img/img9.jpg");
+     background-size: cover;
+     opacity: 1.5;
+  }
+  66%,69%{
+     opacity: 0.8;
+  }
+  70%,100% {
+     background: linear-gradient(
+        rgb(82, 81, 82),
+        rgba(177, 194, 184, 0.1)
+    ),
+     url("img/img10.jpg");
+     background-size: cover;
+     opacity: 1.5;
+  }    
+}
+
+.caja-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+input {
+  width: 150px;
+  height: 20px;
+  border: 0;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.boton {
+  width: 150px;
+  height: 30px;
+  background-color:  rgb(215,57,71);
+  color: aliceblue;
+  text-align: center;
+  border: 0;
+}
+
+/*Artículos restaurantes*/
+.enlaces-texto {
+  color: rgb(215,57,71);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Secciones*/
+.articulo {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  font-size: small;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.articulo p {
+  margin-bottom: 10px; 
+  margin-top: 10px;
+}
+
+.cuerpo-completo{
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+  margin-left: 15%;
+  width: 70%;
+}
+
+.articulo h2{
+  text-align: left;
+  font-size: small;
+}
+
+/*Artículo principal*/
+.articulo-restaurantes{
+  text-align: left;
+  margin:10px;
+  padding: 10px;
+}
+
+.articulo-restaurantes h1{
+  font-size: 22px;
+  text-align: left;
+}
+
+/*Los tres artículos*/
+.restaurante{
+  background-color: rgb(255, 255, 255);
+  margin:10px;
+}
+
+.restaurante h1{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/*Contenido superior de cada uno de los tres restaurantes*/
+/*Recuadro 1 parte de arriba*/
+.descripcion-restaurante{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 130px;
+  align-items: flex-start;
+}
+
+.descripcion-restaurante img{
+  width:160px;
+  margin-left: 10px;
+}
+
+.descripcion-restaurante figure{
+  margin: 0;
+}
+
+/*Recuadro 2 parte de arriba*/
+.valoracion{
+  margin-left: 20px;
+  vertical-align: text-top;
+  width: 150px;
+  font-size: x-small;
+  line-height: 1;
+}
+.num-revisiones{
+    color: rgb(215,57,71);
+}
+
+.precio{
+  color: rgb(56, 82, 103);
+}
+
+.fa-star{
+  color: rgb(215,57,71);
+  font-size: small;
+}
+
+.ultima-conexion{
+  font-size: x-small;
+}
+
+/*Recuadro 3 parte de arriba*/
+.descripcion{
+  margin-left: 10px;
+  max-width:650px;
+  font-size: small;
+  line-height: 1.5;
+}
+
+.descripcion a{
+  text-align: right;
+  font-size: small;
+}
+
+
+.descripcion h2{
+  margin-left: 0;
+  color: rgb(100, 100, 100);
+}
+
+/*Parte de abajo del articulo. Los comentarios*/
+
+.foto-perfil{
+  width: 100px;
+  float: left;
+  height: 80px;
+}
+
+.critica{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: small;
+  line-height: 1.5;
+  height: 130px;
+}
+
+.critica h3{
+  font-size: small;
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+}
+
+.caja1-critica{
+  float: left;
+}
+
+.detalle-critica{
+  margin-left: 400px;
+}
+
+/*MENÚ CIUDADES*/
+#ciudades2{
+  position: relative; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-decoration: none;
+}
+
+#ciudades2 a{
+  text-decoration: none;
+}
+
+#menu11{
+  background-image: url("img/new-york.jpg") ;
+  background-color: rgba(110,110,110);
+  background-blend-mode: soft-light;
+}
+
+#menu22{
+  background-image: url("img/sydney.jpg");
+  background-color: rgba(110,110,110);
+  background-blend-mode: soft-light;
+}
+
+#menu33{
+  background-image: url("img/tokyo.jpg");
+  background-color: rgba(110,110,110);
+  background-blend-mode: soft-light;
+}
+
+.menuc{
+  color: white;
+  height: 20rem;
+  background-size: cover;
+}
+
+#title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+}
+
+/*FOOTER*/
+footer{
+  display: inline-block;
+  color: white;
+  height: 400px;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  bottom: 0;
+}
+
+#contacto{
+ width: 10%;
+ height:40%;
+ background-color: rgb(46, 43, 43);
+ padding: 120px; 
+ float: left; 
+ line-height: 1.6;
+}
+
+#logo-footer{
+ height: 25%;
+ float: left; 
+ margin-bottom: 1em;
+}
+
+#logo-footer img{
+ height: 100%;
+ width: auto;
+}
+
+.direccion{
+ margin: auto;
+}
+
+footer nav{
+ width: 10%;
+ height:auto;
+ float: left;
+ display: block; 
+ margin-top: 145px;
+ margin-left: 10%;
+}
+
+footer nav ul {
+ list-style-type: none;
+}
+
+footer nav h1 {
+ font-size: 17px;
+ margin-bottom: 1em;
+}
+
+#nav-footer{
+ background: url("img/img11.jpg")no-repeat;
+ background-color:rgb(90, 88, 88);
+ background-blend-mode: overlay; 
+ background-size: cover;
+ width: 100%;
+ height:100%;
+ line-height: 1.6;
+}
